@@ -15,14 +15,22 @@ namespace kodlamaio_Gamer
             GameManager gameManager = new GameManager();
             SaleManager saleManager = new SaleManager();
             #region MernisKontrol
-            //customerManager.Add(new Customer
-            //{
-            //    Id=1,
-            //    FirstName="Kadir",
-            //    LastName="Ari",
-            //    IdentityNumber=12312312123,
-            //    DateYear=1999
-            //});
+            try
+            {
+                customerManager.Add(new Customer
+                {
+                    Id = 1,
+                    FirstName = "Kadir",
+                    LastName = "Ari",
+                    IdentityNumber = 12312312123,
+                    DateYear = 1999
+                });
+            }
+            catch 
+            {
+                Console.WriteLine("Kullanıcı Bulunamadı");                
+            }
+           
             #endregion
             #region Customer CRUD
             customerManager.Add();
